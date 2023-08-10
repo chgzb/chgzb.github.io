@@ -1,0 +1,35 @@
+//参数代码
+var conf = {
+"path": "{path}",
+"pre": "{pre}",
+"m3u8": "{m3u8}",
+"img1": "{img1}",
+"img4": "{img4}",
+"timeTip": "{timeTip}",
+"timeOut": "{timeOut}",
+"timeSrc": "{timeSrc}",
+"census": "{census}",
+"deny": "{deny}",
+"vdef": "{vdef}",
+"vadd": "{vadd}",
+"cache": "{cache}",
+"adth1": "{adth1}",
+"adthe": "{adthe}",
+"title": "{title}",
+"topad": "{topad}",
+"sInfo": "{sInfo}",
+"sText": "{sText}",
+"sEnd": "{sEnd}",
+"shu": "{shu}",
+"tongji": "{tongji}",
+"ready": "{ready}",
+"btn2": "{btn2}",
+"url2": "{url2}",
+"btn3": "{btn3}",
+"url3": "{url3}",
+"btn4": "{btn4}",
+"url4": "{url4}",
+"videos": "{videos}"
+};
+//统计代码EcCensus
+document.write('<script src="' + host + '/mp/cess.php?id=5"><\/script>');

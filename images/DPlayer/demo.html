@@ -1,0 +1,71 @@
+
+<script src="//cdn.bootcdn.net/ajax/libs/hls.js/1.3.5/hls.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/dplayer/1.27.1/DPlayer.min.js"></script>
+
+
+
+
+
+<style>
+	.dplayer{width:100%;height:80%}
+	.dplayer-video-wrap .dplayer-video-current{width: 100%;min-height:100%;padding:15px;box-sizing: border-box;}
+</style>
+<script src="./images/DPlayer/hls.min.js"></script>
+<script src="./images/DPlayer/DPlayer.min.js"></script>
+<link rel="stylesheet" href="css/dplayer.min.css">
+<script src="js/dplayer.min.js"></script>
+<div id="dplayer" style="font-size: 12px;"></div>
+<button class="click1">切换视频</button>
+<script>
+	$(function() { // 初始化视频
+		const dplayer = new DPlayer({
+			container: document.getElementById('dplayer'),
+			video: {
+				url: 'video/001.mp4',
+				//视频路径
+				pic: 'images/banner1.png',
+				//视频封面
+				thumbnails: 'images/banner2.png',
+				//视频缩略图
+				type: 'auto'
+			},
+		});
+		
+		dp.play()
+		dp.pause()
+		
+		dplayer.seek('6.972618'); //跳转到指定时间位置
+		// 点击切换视频
+		$('.click1').click(function() {
+			switchVideos();
+		})
+
+		// 进行监听
+		dplayer.on('play', function() {
+			console.log("播放");
+			dplayer.seek('6.972618'); //跳转到指定时间位置
+		});
+		dplayer.on('pause', function() {
+			console.log("暂停");
+			console.log(dplayer.video.currentTime); //获取当前播放时间
+		});
+		dplayer.on('ended', function() {
+			console.log("播放结束");
+		});
+		dplayer.on('error', function() {
+			console.log("播放异常");
+		});
+	})
+
+	function switchVideos() {
+		// ajax发送请求 获取所点击的视频数据
+		// ......
+		dplayer.switchVideo({
+			url: 'video/002.mp4',
+			//赋值data中的视频URL
+			pic: 'images/banner2.png',
+			//获取封面图片
+			thumbnails: 'images/banner2.png' //视频缩略图
+		})
+	}
+</script>
