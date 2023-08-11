@@ -14,7 +14,7 @@ if(config('topad')){
 }
 h	+= '<div style="margin:10px 0 9px;">';
 h	+= '<h3 align="center" style="color:white;">万部电影免费看，分享一人看<span class="addPlay">'+config('vadd')+'</span>部</h3>';
-h	+= '<h3 align="center" style="color:white;">当前可刷新次数：<span style="color:red;" id="sup">0</span> 次</h3>';
+h	+= '<h3 align="center" style="color:white;">当前可刷新次数：<span style="color:red;" id="#sup">0</span> 次</h3>';
 h	+= '</div>';
 h	+= '<div class="video" id="video" ></div>';
 h	+= '<div class="views"  style="width: 100%;height: 220px;display:none;">';
